@@ -1,0 +1,29 @@
+
+Удаление 
+(
+// new data
+$title = '12';
+$author = '1000';
+ 
+// query
+$sql = "INSERT INTO user_money (user_id,money) VALUES (:title,:author)";
+$q = DB::prepare($sql);
+$q->execute(array(':author'=>$author,
+                  ':title'=>$title));
+ )
+ 
+ Вывод из таблицы 
+ (
+ $ar = DB::query("SELECT login,name,email FROM users");
+extract($ar);
+ // Описание:
+ // При таком запросе выводим данные через $login, $name, $email
+ // Так же можно использовать по старинке while ($row = $ar->fetch())
+ )
+ 
+ ВЫвод количество строк в таблице 
+ (
+ $res = DB::query('SELECT COUNT(*) FROM user_money');
+$num_rows = $res->fetchColumn();
+ 
+ )

@@ -1,0 +1,23 @@
+body{
+	font-family: sans-serif;
+	background-color: #edf5ed;
+}
+button, input[type="submit"]{
+	margin: 5px 5px 0 0;
+	width: 30px;
+	height: 30px;
+}
+input, select{
+	height: 30px;
+	font-size: large;
+	text-align: center;
+}
+input[type="text"]{
+	width: 55px;
+}
+.red{
+	color: red;
+}
+p, form, h2{
+	margin: 20px;
+}

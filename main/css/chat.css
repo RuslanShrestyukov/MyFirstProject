@@ -1,0 +1,458 @@
+/* Main chat container */
+
+#chatContainer{
+
+}
+
+#chatContainer a {
+text-decoration:none;
+	outline:none;
+}
+
+
+/* Chats */
+
+
+#chatLineHolder{
+	margin-bottom:20px;
+	padding: 0px; 
+	top: 0px;
+	overflow:auto;
+	height: 400px;
+}
+
+#allmessages {
+	margin-bottom:20px;
+	padding: 0px; 
+	top: 0px; 
+	height:430px; 
+	overflow:auto;
+	margin-top: -20px;
+}
+
+
+
+#ap_code{
+	padding: 0px; 
+	top: 0px;
+	overflow:auto;
+	height: 260px;
+}
+
+#who_online{
+	padding: 0px; 
+	top: 0px;
+	overflow:auto;
+	height: 342px;
+}
+
+#ap_users{
+	padding: 0px; 
+	top: 0px;
+	overflow:auto;
+	height: 280px;
+}
+
+.chat{
+	
+	min-height:41px;
+	padding:6px;
+	border:1px solid #FFFFFF;
+	
+	padding:8px 6px 4px 37px;
+	position:relative;
+	margin:0 10px 10px 0;
+}
+
+.chat:last-child{
+	margin-bottom:0;
+}
+
+.chat span{
+	color:#777777;
+	text-shadow:1px 1px 0 #FFFFFF;
+	font-size:14px;
+}
+
+.chat .text{
+	color:#444444;
+	font-size:16px;
+	overflow:hidden;
+	vertical-align:top;
+	word-wrap: break-word;
+	padding-left: 35px;
+}
+
+.chat .gravatar{
+	left:7px;
+	position:absolute;
+	top:7px;
+}
+
+.chat .time{
+	position:absolute;
+	right:5px;
+	top:12px;
+	font-size:11px;
+	display: inline;
+}
+
+.chat .author{
+	margin-right:1px;
+	font-size:14px;
+	display: inline;
+	cursor: pointer;
+	padding-left: 35px;
+}
+
+/* Низ */
+
+
+#chatBottomBar{
+	background:url('/main/img/solid_gray.jpg') repeat-x #d0d0d0;
+	position:relative;
+	padding:10px;
+	border:1px solid #fff;
+}
+
+#chatBottomBar .tip{
+	position:absolute;
+	width:0;
+	height:0;
+	border:10px solid transparent;
+	border-bottom-color:#eeeeee;
+	top:-20px;
+	left:20px;
+}
+
+#chatBottomBar .resizechat{
+	position:absolute;
+	width:0;
+	height:0;
+	border:10px solid transparent;
+	top:-20px;
+	left: 13px;
+	cursor:pointer;
+}
+
+#chatContainer input{
+
+	
+}
+
+input#pac_text{
+
+}
+
+
+/* Дополнтиельные стили */
+
+#chatContainer .blueButton{
+	background:url('/main/img/button_blue.png') no-repeat;
+	border:none !important;
+	color:#516D7F !important;
+	display:inline-block;
+	font-size:13px;
+	height:29px;
+	text-align:center;
+	text-shadow:1px 1px 0 rgba(255, 255, 255, 0.4);
+	width:75px;
+	margin:0;
+	cursor:pointer;
+	float: right;
+}
+
+#chatContainer .blueButton:hover{
+	background-position:left bottom;
+}
+
+.rounded{
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border-radius:4px;
+}
+
+.modalDialog {
+ position: fixed;
+ font-family: Arial, Helvetica, sans-serif;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+ background: rgba(0,0,0,0.8);
+ z-index: 99999;
+ -webkit-transition: opacity 400ms ease-in;
+ -moz-transition: opacity 400ms ease-in;
+ transition: opacity 400ms ease-in;
+ display: none;
+ pointer-events: none;
+} 
+.modalDialog:target {
+ display: block;
+ pointer-events: auto;
+}
+ 
+.modalDialog > div {
+  width: 80%;
+  position: relative;
+  margin: 10% auto;
+ padding: 5px 20px 13px 20px;
+ border-radius: 10px;
+ background: #fff;
+}
+
+.jGrowl.close {
+ background: #606061;
+ color: #FFFFFF;
+ line-height: 25px;
+ position: absolute;
+ right: -12px;
+ text-align: center;
+ top: -10px;
+ width: 24px;
+ text-decoration: none;
+ font-weight: bold;
+ -webkit-border-radius: 12px;
+ -moz-border-radius: 12px;
+ border-radius: 12px;
+ -moz-box-shadow: 1px 1px 3px #000;
+ -webkit-box-shadow: 1px 1px 3px #000;
+ box-shadow: 1px 1px 3px #000;
+}
+ 
+.close:hover { background: #00d9ff; }
+
+
+/** Special IE6 Style Positioning **/
+.ie6 {
+	position: 			absolute;
+}
+
+.ie6.top-right {
+	right: 				auto;
+	bottom: 			auto;
+	left: 				expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.top-left {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.bottom-right {
+	left: 				expression( ( 0 - jGrowl.offsetWidth + ( document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth ) + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.bottom-left {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 - jGrowl.offsetHeight + ( document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight ) + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+}
+
+.ie6.center {
+	left: 				expression( ( 0 + ( ignoreMe2 = document.documentElement.scrollLeft ? document.documentElement.scrollLeft : document.body.scrollLeft ) ) + 'px' );
+	top: 				expression( ( 0 + ( ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop ) ) + 'px' );
+	width: 				100%;
+}
+
+
+/** jGrowl Styling **/
+.jGrowl {
+	z-index: 			9999;
+	color: 				#fff;
+	font-size: 			12px;
+	position:			fixed;
+}
+
+.jGrowl.top-left {
+	left: 				0px;
+	top: 				0px;
+}
+
+.jGrowl.top-right {
+	right: 				0px;
+	top: 				0px;
+}
+
+.jGrowl.bottom-left {
+	left: 				0px;
+	bottom:				0px;
+}
+
+.jGrowl.bottom-right {
+	right: 				0px;
+	bottom: 			0px;
+}
+
+.jGrowl.center {
+	top: 				0px;
+	width: 				50%;
+	left: 				25%;
+}
+
+/** Cross Browser Styling **/
+.center .jGrowl-notification, .center .jGrowl-closer {
+	margin-left: 		auto;
+	margin-right: 		auto;
+}
+
+.jGrowl .jGrowl-notification, .jGrowl .jGrowl-closer {
+	background-color: 		#000;
+	opacity: 				.85;
+	-ms-filter: 			"progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; 
+	filter: 				progid:DXImageTransform.Microsoft.Alpha(Opacity=85); 
+	zoom: 					1;
+	width: 					235px;
+	padding: 				10px;
+	margin-top: 			5px;
+	margin-bottom: 			5px;
+	margin-right: 			5px;
+	font-family: 			Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 				1em;
+	text-align: 			left;
+	display: 				none;
+	border-radius:			5px;
+}
+
+.jGrowl .jGrowl-notification {
+	min-height: 			40px;
+}
+
+.jGrowl .jGrowl-notification,
+.jGrowl .jGrowl-closer {
+	margin: 				10px;
+}
+
+.jGrowl .jGrowl-notification .jGrowl-header {
+	font-weight: 			bold;
+	font-size:				.85em;
+}
+
+.jGrowl .jGrowl-notification .jGrowl-close {
+	z-index:				99;
+	float: 					right;
+	font-weight: 			bold;
+	font-size: 				1em;
+	cursor:					pointer;
+}
+
+.jGrowl .jGrowl-closer {
+	padding-top: 			4px;
+	padding-bottom: 		4px;
+	cursor: 				pointer;
+	font-size:				.9em;
+	font-weight: 			bold;
+	text-align: 			center;
+}
+
+/** Hide jGrowl when printing **/
+@media print {
+	.jGrowl {
+		display: 			none;
+	}
+}
+
+
+/* style pricing */
+.pricingTable{
+ border: 2px solid #f7959f;
+ padding: 40px 0;
+ text-align: center;
+}
+.pricingTable .title{
+ font-size: 18px;
+ color: #727cb6;
+ text-transform: uppercase;
+ margin: 0 0 16px 0;
+}
+.pricingTable .amount{
+ display: block;
+ font-size: 80px;
+ text-transform: uppercase;
+ color: #333;
+ line-height: 1;
+}
+.pricingTable .month{
+ display: block;
+ font-size: 35px;
+color: #333;
+ text-transform: uppercase;
+ margin: 5px 0 20px 0;
+}
+.pricingTable .icon{
+ margin-bottom: 30px;
+ position: relative;
+}
+.pricingTable .icon:before,
+.pricingTable .icon:after{
+ content: "";
+ width: 30px;
+ height: 1px;
+ background: #dadada;
+ position: absolute;
+ top: 50%;
+}
+.pricingTable .icon:before{
+ left: 0;
+}
+.pricingTable .icon:after{
+ right: 0;
+}
+.pricingTable .icon i{
+ font-size: 25px;
+ color: #333;
+ line-height: 40px;
+ position: relative;
+}
+.pricingTable .pricing-content{
+ list-style: none;
+ padding: 0;
+ margin: 0 0 40px 0;
+}
+.pricingTable .pricing-content li{
+ font-size: 14px;
+ color: #333;
+ line-height: 15px;
+ margin-bottom: 25px;
+}
+.pricingTable .pricingTable-signup{
+ display: inline-block;
+ padding: 10px 37px;
+ border-radius: 50px;
+ font-size: 14px;
+ color: #666;
+ line-height: 1.5;
+ border: 2px solid #ccc;
+ text-transform: uppercase;
+ transition: all 0.2s ease-in-out 0s;
+ text-decoration: none !important;
+}
+.pricingTable .pricingTable-signup:hover{
+ border-color: #b3b3b3;
+}
+.pricingTable.middle{
+ border-color: #727cb6;
+ background: #727cb6;
+ box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.25);
+ color: #fff;
+}
+.pricingTable.middle .title,
+.pricingTable.middle .amount,
+.pricingTable.middle .month,
+.pricingTable.middle .icon i,
+.pricingTable.middle .pricing-content li{
+ color: #fff;
+}
+.pricingTable.middle .pricingTable-signup{
+ background: #f7959f;
+ border-color: #f7959f;
+ color: #fff;
+}
+.pricingTable.middle .pricingTable-signup:hover{
+ background: #e67c86;
+ border-color: #e67c86;
+}
+@media only screen and (max-width: 990px){
+ .pricingTable{ margin-bottom: 30px; }
+} 

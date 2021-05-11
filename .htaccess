@@ -1,0 +1,40 @@
+DirectoryIndex index.php
+
+AddDefaultCharset utf-8
+
+Options -Indexes
+ErrorDocument 400 /error
+ErrorDocument 403 /error
+ErrorDocument 404 /error
+ErrorDocument 405 /error
+ErrorDocument 408 /error
+ErrorDocument 500 /error
+ErrorDocument 502 /error
+ErrorDocument 504 /error
+
+RewriteEngine On
+
+RewriteRule ^ap$ /admin_panel.php
+RewriteRule ^news$ /index.php?page=news
+RewriteRule ^news_([0-9]+)_postedit_([0-9]+)$ /index?page=news&id=$1&postid=$2
+RewriteRule ^news_([0-9]+)$ /index?page=news&id=$1
+RewriteRule ^news_page([0-9]+)$ /index?page=news&page=$1
+RewriteRule ^news_([0-9]+)_page([0-9]+)$ /index?page=news&id=$1&page=$2
+RewriteRule ^error$ /index.php?page=error
+RewriteRule ^stats$ /index.php?page=stats
+RewriteRule ^stats_([0-9]+)_([0-9]+)$ /index?page=stats&id=$1_$2
+RewriteRule ^auth$ /index.php?page=auth
+RewriteRule ^logout$ /index.php?page=auth&logout
+RewriteRule ^reg$ /index.php?page=reg
+RewriteRule ^settings$ /index.php?page=settings
+RewriteRule ^profile_([0-9]+)$ /index?page=profile&user=$1
+RewriteRule ^balance$ /index.php?page=balance
+RewriteRule ^doc$ /index.php?page=doc
+RewriteRule ^doc_([0-9]+)$ /index?page=doc&id=$1
+RewriteRule ^faq$ /index.php?page=faq
+RewriteRule ^partner$ /index.php?page=partner
+RewriteRule ^forecast$ /index.php?page=forecast
+RewriteRule ^pay$ /index.php?page=pay
+RewriteRule ^pay_([0-9]+)$ /index?page=pay&id=$1
+
+RewriteRule ^(([^/]+/)*[^.]+)$ /$1.php [L]
